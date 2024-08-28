@@ -1,0 +1,32 @@
+﻿@page
+@model CrudUsingADO.NET.Models.Student
+@{
+    ViewData["Title"] = "View Report";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Viewer</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.0/jquery-ui.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aspnet-reportviewer@1.0.3/dist/jsReportViewer.min.js"></script>
+</head>
+<body>
+    <div>
+        <form id="form1" runat="server">
+            <asp:ScriptManager ID="ScriptManager1" runat="server" />
+            <rsweb:ReportViewer ID="ReportViewer1" runat="server" Width="100%" Height="800px">
+            </rsweb:ReportViewer>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Configure ReportViewer settings if needed
+        });
+    </script>
+</body>
+</html>
